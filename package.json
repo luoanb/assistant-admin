@@ -1,5 +1,5 @@
 {
-  "name": "vue3-antdv-admin",
+  "name": "assistant-admin",
   "version": "2.0.0",
   "packageManager": "pnpm@9.4.0",
   "type": "module",
@@ -133,9 +133,9 @@
   "__npminstall_done": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/buqiyuan/vue3-antdv-admin"
+    "url": "https://github.com/luoanb/assistant-admin"
   },
-  "homepage": "https://buqiyuan.gitee.io/vue3-antdv-admin",
+  "homepage": "http://admin.graphictheory.top",
   "keywords": [
     "vue",
     "ant-design-vue",

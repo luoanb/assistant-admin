@@ -1,7 +1,6 @@
 import { resolve } from 'node:path';
 import { loadEnv } from 'vite';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import mkcert from 'vite-plugin-mkcert';
 import vue from '@vitejs/plugin-vue';
 import checker from 'vite-plugin-checker';
 import Components from 'unplugin-vue-components/vite';
@@ -11,7 +10,6 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import dayjs from 'dayjs';
 import mockServerPlugin from '@admin-pkg/vite-plugin-msw/vite';
 import TinymceResourcePlugin from '@admin-pkg/vite-plugin-tinymce-resource';
-import Http2Proxy from '@admin-pkg/vite-plugin-http2-proxy';
 import Inspector from 'vite-plugin-vue-inspector';
 import pkg from './package.json';
 import type { UserConfig, ConfigEnv } from 'vite';
@@ -56,10 +54,10 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       vueJsx({
         // options are passed on to @vue/babel-plugin-jsx
       }),
-      // 指定 mkcert 的下载源为 coding，从 coding.net 镜像下载证书
-      mkcert({ source: 'coding' }),
-      // 开启 http2 代理
-      Http2Proxy(),
+      // // 指定 mkcert 的下载源为 coding，从 coding.net 镜像下载证书
+      // mkcert({ source: 'coding' }),
+      // // 开启 http2 代理
+      // Http2Proxy(),
       mockServerPlugin({ build: isBuild && VITE_MOCK_IN_PROD === 'true' }),
       TinymceResourcePlugin({ baseUrl: '/tinymce-resource/' }),
       createSvgIconsPlugin({
